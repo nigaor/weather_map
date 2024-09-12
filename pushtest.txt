@@ -1,0 +1,6 @@
+pushtest
+pushtest2
+9/13
+typescriptの勉強
+オブジェクト指向
+
