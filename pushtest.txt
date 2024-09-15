@@ -6,3 +6,9 @@ typescriptの勉強
 
 9/14
 Reactのテンプレートの内容理解
+
+9/16
+Reactのテンプレートの理解
+try,catch文
+async,await文
+
