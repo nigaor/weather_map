@@ -12,3 +12,5 @@ Reactのテンプレートの理解
 try,catch文
 async,await文
 
+9/17
+Typescriptの勉強
