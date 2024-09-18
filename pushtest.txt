@@ -18,3 +18,7 @@ Typescriptの勉強
 9/18
 Typescriptの勉強
 各入力フォームに異なる文字を入力する
+
+9/19
+Typescriptの勉強
+いいねボタンの実装
