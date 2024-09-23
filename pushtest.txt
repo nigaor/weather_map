@@ -30,5 +30,11 @@ Typescriptの勉強
 9/23
 Typescriptの勉強
 
+9/24
+Typescriptの勉強
+インターフェイス
+map
+react.FC
+
 
 
