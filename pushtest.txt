@@ -57,4 +57,5 @@ Typescriptの勉強
 10/1
 Typescriptの勉強
 
-
+10/2
+Typescriptの勉強
