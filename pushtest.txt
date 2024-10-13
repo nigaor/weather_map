@@ -86,3 +86,6 @@ Typescriptの勉強
 
 10/13
 Typescriptの勉強
+
+10/14
+Typescriptの勉強
