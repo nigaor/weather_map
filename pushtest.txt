@@ -126,4 +126,5 @@ Typescript
 10/27
 Typescriptの勉強
 
-
+10/28
+Typescriptの勉強
