@@ -141,4 +141,7 @@ Typescriptの勉強
 11/1
 Typescriptの勉強
 
+11/2
+Typescriptの勉強
+
 
