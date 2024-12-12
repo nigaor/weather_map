@@ -1,12 +1,18 @@
 import React,{useState} from 'react';
 import './App.css';
 
-type Props = {
+type SquareProps = {
   value:string|null;
   onSquareClick:any;
 }
 
-function Square(props:Props) {
+type BoardProps = {
+  xIsNext:boolean;
+  squares:string[]|null[];
+  onPlay:any;
+}
+
+function Square(props:SquareProps) {
   const {value,onSquareClick} = props;
   return(
   <button
@@ -18,9 +24,10 @@ function Square(props:Props) {
   );
 }
 
-function Board() {
-  const [xIsNext,setXIsNext] = useState(true);
-  const [squares,setSquares] = useState<string[] | null[] >(Array(9).fill(null));
+function Board(props:BoardProps) {
+  const {xIsNext,squares,onPlay} =props
+  // const [xIsNext,setXIsNext] = useState(true);
+  // const [squares,setSquares] = useState<string[] | null[] >(Array(9).fill(null));
   const winner = calculateWinner(squares);
   let status;
 
@@ -40,8 +47,7 @@ function Board() {
     } else {
       nextSquares[i] = "O";
     }
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   }
 
   return (
@@ -86,6 +92,29 @@ function calculateWinner(squares:string[]|null[]):string|null {
   return null;
 }
 
+function Game(){
+  const [xIsNext,setXIsNext] = useState(true);
+  const [history,setHistory] = useState([Array(9).fill(null)]);
+  const currentSquares = history[history.length - 1];
+
+  function handlePlay(nextSquares:string[]|null[]){
+    setHistory([...history,nextSquares]);
+    setXIsNext(!xIsNext);
+
+  }
+
+  return(
+    <div className="game">
+      <div className="game-board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{/*TODO*/}</ol>
+      </div>
+    </div>
+  );
+}
+
 //最後GPTにTypescriptに変換するように指示する
 
-export default Board;
+export default Game;
