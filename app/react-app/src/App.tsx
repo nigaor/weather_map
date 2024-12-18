@@ -133,4 +133,7 @@ function Game(){
 
 //最後GPTにTypescriptに変換するように指示する
 
+
+
+
 export default Game;
