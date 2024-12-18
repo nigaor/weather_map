@@ -13,6 +13,7 @@ type BoardProps = {
 }
 
 function Square({value,onSquareClick}:SquareProps) {
+  
   return(
   <button
     className="square"
