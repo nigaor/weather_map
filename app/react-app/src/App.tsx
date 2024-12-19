@@ -26,6 +26,7 @@ function Square({value,onSquareClick}:SquareProps) {
 
 function Board({xIsNext,squares,onPlay}:BoardProps) {
   const winner = calculateWinner(squares);
+  const [squareHistory,setSquareHistory] = useState<(string|null)[]>([]);
   let status;
 
   if(winner) {
@@ -38,6 +39,12 @@ function Board({xIsNext,squares,onPlay}:BoardProps) {
     if(squares[i] || calculateWinner(squares)){
       return;
     }
+
+    squareHistory.push(squares[i]);
+    if(squareHistory.length<7){
+
+    }
+
     const nextSquares = squares.slice();
     if(xIsNext){
       nextSquares[i] = "X";
