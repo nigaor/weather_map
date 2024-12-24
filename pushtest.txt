@@ -291,16 +291,10 @@ Typescript
 12/23
 Typescript
 
-<<<<<<< HEAD
 12/24
 Typescript
 
-
-=======
-test
->>>>>>> refs/remotes/origin/main
+12/25
+Typescript
 
 
-
-
- 
